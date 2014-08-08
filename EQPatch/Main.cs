@@ -88,6 +88,7 @@ namespace EQPatch
 
         private void Main_Load(object sender, EventArgs e)
         {
+            LoadPatchDirectoryList();
             try
             {
                 string iniPath = baseDirectory + "\\eqpatch.ini";
@@ -105,11 +106,21 @@ namespace EQPatch
                     Console.WriteLine("Loading skin");
                     this.BackgroundImage = Image.FromFile(baseDirectory + "skin.jpg");
                 }*/
+                
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "An error occured during startup.");
                 Application.Exit();
+            }
+        }
+
+        private void LoadPatchDirectoryList()
+        {
+            string[] filePaths = Directory.GetDirectories(baseDirectory+"patch");
+            foreach (string file in filePaths) {
+                string newFile = file.Replace(baseDirectory+"patch\\", "");
+                cmbPatchList.Items.Add(newFile);
             }
         }
 

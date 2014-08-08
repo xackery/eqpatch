@@ -31,14 +31,16 @@
             this.btnPatch = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblProgress = new System.Windows.Forms.Label();
+            this.cmbPatchList = new System.Windows.Forms.ComboBox();
+            this.chkAutoPlay = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnPatch
             // 
             this.btnPatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPatch.Location = new System.Drawing.Point(205, 209);
+            this.btnPatch.Location = new System.Drawing.Point(176, 209);
             this.btnPatch.Name = "btnPatch";
-            this.btnPatch.Size = new System.Drawing.Size(75, 23);
+            this.btnPatch.Size = new System.Drawing.Size(104, 23);
             this.btnPatch.TabIndex = 0;
             this.btnPatch.Text = "Patch";
             this.btnPatch.UseVisualStyleBackColor = true;
@@ -63,11 +65,31 @@
             this.lblProgress.TabIndex = 2;
             this.lblProgress.Text = "Ready to patch.";
             // 
+            // cmbPatchList
+            // 
+            this.cmbPatchList.FormattingEnabled = true;
+            this.cmbPatchList.Location = new System.Drawing.Point(176, 100);
+            this.cmbPatchList.Name = "cmbPatchList";
+            this.cmbPatchList.Size = new System.Drawing.Size(104, 21);
+            this.cmbPatchList.TabIndex = 3;
+            // 
+            // chkAutoPlay
+            // 
+            this.chkAutoPlay.AutoSize = true;
+            this.chkAutoPlay.Location = new System.Drawing.Point(153, 186);
+            this.chkAutoPlay.Name = "chkAutoPlay";
+            this.chkAutoPlay.Size = new System.Drawing.Size(127, 17);
+            this.chkAutoPlay.TabIndex = 4;
+            this.chkAutoPlay.Text = "Auto Play After Patch";
+            this.chkAutoPlay.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 273);
+            this.Controls.Add(this.chkAutoPlay);
+            this.Controls.Add(this.cmbPatchList);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnPatch);
@@ -85,6 +107,8 @@
         private System.Windows.Forms.Button btnPatch;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.ComboBox cmbPatchList;
+        private System.Windows.Forms.CheckBox chkAutoPlay;
     }
 }
 
